@@ -297,7 +297,7 @@ sub render {
 
     $this->{header} = "<noautolink><div class=\"$class {itemSelector:'.igpThumbNail', singleMode:true}\" id='igp$this->{id}'>\n";
     $this->{footer} = "<span class='foswikiClear'></span></div></noautolink>";
-    $this->{format} = "<a href='\$imageurl' class='igpThumbNail {origUrl:\"\$origurl\"}' style='width:".$this->{thumbwidth}."px; height:".$this->{thumbheight}."px;' title='\$comment'><img src='\$thumburl' alt='\$comment' /></a>"
+    $this->{format} = "<a href='\$imageurl' class='igpThumbNail {origUrl:\"\$origurl\"}' style='width:".$this->{thumbwidth}."px; height:".$this->{thumbheight}."px;' title='\$comment'><img src='\$origurl' alt='\$comment' /></a>"
       unless defined $this->{format};
     $result .= $this->renderFormatted();
   } elsif ($this->{format}) {
